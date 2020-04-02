@@ -1,0 +1,207 @@
+
+######################################################
+#   CORPUS OF AMBIGUOUS SENTENCES FRO AMR EVALUATION
+#
+# For further information, contact:               
+# Bernard ESPINASSE (bernard.espinasse@lis-lab.fr)
+# Rita HIJAZI (rita.hijazi@etu.univ-amu.fr )     
+# 
+# Each sentence is followed with its generation 
+# with # ::Gophi, # ::JAMR and # ::Neural-AMR generators
+#
+######################################################
+
+
+##### Phrases with categorical lexical ambiguities
+# ::id amu-lc-ambig_1a
+# ::snt I bought a book
+# ::Gophi : I buy the book. 
+# ::JAMR: i bought a book
+# ::Neural-AMR: i bought the book.
+
+# ::id amu-lc-ambig_1b
+# ::snt I booked my ticket this morning 
+# ::Gophi: I book my ticket the morning.
+# ::JAMR: i book the ticket morning.
+# ::Neural-AMR: i booked my ticket in the morning 
+
+# ::id amu-lc-ambig_2a
+# ::snt My head hurts 
+# ::Gophi: My head hurt.
+# ::JAMR: head of the " i 'm hurting
+# ::Neural-AMR: my head is hurting.
+
+# ::id amu-lc-ambig_2b
+# ::snt He heads the news section
+# ::Gophi : He heads the news section. 
+# ::JAMR: he is the head of the news section
+# ::Neural-AMR: he heads the news section
+
+# ::id amu-lc-ambig_2c
+# ::snt We'll head them off 
+# ::Gophi : We head off them.
+# ::JAMR : we head-off they
+# ::Neural-AMR: we are heads them
+
+# ::id amu-lc-ambig_3a
+# ::snt He bought some butter from the store 
+# ::Gophi : He buys some the butter in the store.
+# ::JAMR: he would buy some of the butter in the store 
+# ::Neural-AMR: he bought some butter at the store.
+
+# ::id amu-lc-ambig_3b
+# ::snt He is going to butter the bread 
+# ::Gophi : He butters the bread. 
+# ::JAMR: he had butter on bread.
+# ::Neural-AMR: he butter bread
+
+# ::id amu-lc-ambig_4a
+# ::snt She has a red shovel 
+# ::Gophi: She has the red shovel. 
+# ::JAMR : she has shoveled red
+# ::Neural-AMR: she had red shoveled
+
+# ::id amu-lc-ambig_4b
+# ::snt She is going to shovel the snow 
+# ::Gophi : She shovels the snow. 
+# ::JAMR : she shoveled snow
+# ::Neural-AMR: she shoveled the snow.
+
+# ::id amu-lc-ambig_5a
+# ::snt Sarah climbed down the ladder
+# ::Gophi : Sarah climbs the ladder to the down.
+# ::JAMR: sarah climbed down a ladder
+# ::Neural-AMR: Sarah climbed down the ladder.
+
+# ::id amu-lc-ambig_5b
+# ::snt Sarah bought a down blanket 
+# ::Gophi: Sarah buys the down blanket. 
+# ::JAMR: sarah to buy down the blanket
+# ::Neural-AMR: Sarah bought down blankets
+
+# ::id amu-lc-ambig_6a
+# ::snt My dog always barks at mailmen 
+# ::Gophi : My dog bark always at the mailman.
+# ::JAMR: i dog to bark in the always mailman
+# ::Neural-AMR: my dogs have always been bark.
+
+# ::id amu-lc-ambig_6b
+# ::snt The tree’s bark was brown 
+# ::Gophi : The bark of the tree is brown.
+# ::JAMR: brown bark of a tree
+# ::Neural-AMR: brown the tree 's bark .
+
+# ::id amu-lc-ambig_7a
+# ::snt Flying planes are dangerous 
+# ::Gophi: Endangerment is the plane that is flown.
+# ::JAMR : flying plane is endangered
+# ::Neural-AMR: flying planes are dangerous.
+
+# ::id amu-lc-ambig_7b
+# ::snt Flying planes is dangerous 
+# ::Gophi: It is endangered that the plane is flown
+# ::JAMR: flying a plane , endangering
+# ::Neural-AMR : the plane flying is dangerous.
+
+# ::id amu-lc-ambig_8a
+# ::snt They can fish 
+# ::Gophi : They can fish 
+# ::JAMR : can they fish
+# ::Neural-AMR : they can fish.
+
+# ::id amu-lc-ambig_8b
+# ::snt They can fish 
+# ::Gophi : They can the fish. 
+# ::JAMR : they can fish
+# ::Neural-AMR : they canned fish.
+
+
+##### Phrases with non-categorical lexical ambiguities
+
+
+# ::id amu-lnc-ambig_9a
+# ::snt He caught a fish at the bank 
+# ::Gophi: He catches the fish in the bank. 
+# ::JAMR: he catch fish in bank
+# ::Neural-AMR : he caught the fish in the bank 
+
+# ::id amu-lnc-ambig_9b
+# ::snt He went to the bank to put money
+# ::Gophi : He goes to the bank for the money being put.
+# ::JAMR: he went to the bank to put their money.
+# ::Neural-AMR : he went to the bank to put the money.
+
+# ::id amu-lnc-ambig_10a
+# ::snt John gave him a tap on the shoulder 
+# ::Gophi: John gives the tap to him on the shoulder.
+# ::JAMR: john gave a tap on her shoulder
+# ::Neural-AMR : John gave him a tap on the shoulder.
+
+# ::id amu-lnc-ambig_10b
+# ::snt The water tap is broken 
+# ::Gophi: The water tap breaks.
+# ::JAMR : water tap is broken
+# ::Neural-AMR : the water tap is broken
+
+# ::id amu-lnc-ambig_11a
+# ::snt  The city was near the mouth of the river 
+# ::Gophi: the city near the mouth of the river.
+# ::JAMR: near mouth of the river city.
+# ::Neural-AMR : -
+
+# ::id amu-lnc-ambig_11b
+# ::snt Don't speak with your mouth full 
+# ::Gophi: Do not speak by the full mouth.
+# ::JAMR: you spoke in full , mouth – imperative.
+# ::Neural-AMR : don't speak in full mouth.
+
+# ::id amu-lnc-ambig_12a
+# ::snt I have a goal in life  
+# ::Gophi: I have the goal in the life.
+# ::JAMR: i have a goal in life.
+# ::Neural-AMR : i have a goal in life.
+
+# ::id amu-lnc-ambig_12b
+# ::snt Liverpool won by one goal to nil 
+# ::Gophi: Liverpool wins by one of the goal to none.
+# ::JAMR: -
+# ::Neural-AMR : the Liverpool won with one goal and none .
+
+
+#####  Phrases with syntactic (or structural) ambiguities
+
+# ::id amu-syn-ambig_13a
+# ::snt The murderer killed the student with a book 
+# ::Gophi: The murderer kills the student with the book
+# ::JAMR: book of a person who studies murderer killed.
+# ::Neural-AMR : the murderer killed with a book a student.
+
+# ::id amu-syn-ambig_13b
+# ::snt The murderer killed the student with a book
+# ::Gophi : The murderer kills the student with the book.
+# ::JAMR: murderer to kill a person with a study of the book.
+# ::Neural-AMR : the murderer killed a student with a book.
+
+# ::id amu-syn-ambig_14a
+# ::snt You should bring wine or beer and dessert
+# ::Gophi: It is recommended that you bring the wine or the beer and the dessert.
+# ::JAMR: should you brought the dessert and beer or wine.
+# ::Neural-AMR : you should bring wine or beer or dessert
+
+# ::id amu-syn-ambig_14b
+# ::snt You should bring wine or beer and dessert
+# ::Gophi: It is recommended that you bring the dessert and the beer or the wine.
+# ::JAMR: -
+# ::Neural-AMR : you should bring dessert and beer or wine.
+
+# ::id amu-syn-ambig_15a
+# ::snt Young boys and girls love the adventure playground 
+# ::Gophi : The young boy and the girl love the adventure playground.
+# ::JAMR: young boy and girl who loved adventure playground.
+# ::Neural-AMR : young boys and girls love playground playground.
+
+# ::id amu-syn-ambig_15b
+# ::snt Young boys and girls love the adventure playground 
+# ::Gophi: The young boy and the girl who is it love the adventure playground.
+# ::JAMR: young boy and girl who loved adventure playground.
+# ::Neural-AMR : young boys and girls love playground playground.

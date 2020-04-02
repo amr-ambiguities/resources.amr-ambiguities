@@ -1,0 +1,916 @@
+######################################################
+#   CORPUS OF AMBIGUOUS SENTENCES FRO AMR EVALUATION
+#
+# For more information, contact:
+#  - Bernard ESPINASSE (bernard.espinasse@lis-lab.fr)
+#  - Rita HIJAZI (rita.hijazi@etu.univ-amu.fr )
+# 
+# Each sentence is followed with its translation in AMR
+# in Penman notation (reference by human annotators)
+#
+######################################################
+
+
+#### Sentences with lexical categorial ambiguities:
+
+# ::id amu-lc-ambig_1a
+# ::snt I bought a book
+(b / buy-01
+    :ARG0 (i / i)
+    :ARG1 (b2 / book))
+
+# ::id amu-lc-ambig_1a-jamr
+# ::smatch 0.8
+(b / buy-01
+    :ARG0 (i / i)
+    :ARG1 (b2 / book))
+
+# ::id amu-lc-ambig_1a-camr
+# ::smatch 1.0
+(b / buy-01
+    :ARG0 (i / i)
+    :ARG1 (b2 / book))
+
+# ::id amu-lc-ambig_1a-namr
+# ::smatch 1.0
+(b / buy-01
+    :ARG0 (i / i)
+    :ARG1 (b2 / book))
+
+# ::id amu-lc-ambig_1b
+# ::snt I booked my ticket this morning
+(b / book-03
+      :ARG0 (i / i)
+      :ARG1 (t  / ticket
+          :poss i)
+      :time (m / morning))
+
+# ::id amu-lc-ambig_1b-jamr
+# ::smatch 0.71
+(b / book-03 
+      :ARG0 (i / i) 
+      :ARG1 (t2 / ticket) 
+      :op1-of (t / this))
+
+# ::id amu-lc-ambig_1b-camr
+# ::smatch 0.63
+(x2 / book
+	:ARG0 (x1 / i)
+	:ARG1 (x4 / ticket)
+	:time (x6 / morning
+		:mod (x5 / this)))
+
+# ::id amu-lc-ambig_1b-namr
+# ::smatch 1.0
+(b / book-03 
+        :ARG0 (i / i) 
+        :ARG1 (t / ticket 
+                :poss (i2 / i)) 
+        :time (m / morning 
+               :mod (t2 / this)))
+
+# ::id amu-lc-ambig_2a
+# ::snt My head hurts
+(h / hurt-01
+    :ARG0 (h2 / head
+        :part-of (i / i)))
+
+# ::id amu-lc-ambig_2a-jamr
+# ::smatch 0.2
+(h / head-01 
+        :ARG0 (i / i))
+
+# ::id amu-lc-ambig_2a-camr
+# ::smatch 0.4
+(x3 / hurt-01
+	:ARG1 (x2 / head-01))
+# ::id amu-lc-ambig_2a-namr
+# ::smatch 0.5
+(h / head
+         :part-of (i / i))
+
+# ::id amu-lc-ambig_2b
+# ::snt He heads the news section 
+(h / head-01
+    :ARG0 (h2 / he)
+    :ARG1 (s / section 
+            :mod (n / news)))
+
+# ::id amu-lc-ambig_2b-jamr
+# ::smatch 0.71
+(h / head-01 
+      :ARG0 (h2 / he) 
+      :ARG1 (n / news))
+
+# ::id amu-lc-ambig_2b-camr
+# ::smatch 0.71
+(x2 / head-01
+	:ARG0 (x1 / he)
+	:ARG1 (x5 / section
+		:mod (x4 / news)))
+
+# ::id amu-lc-ambig_2b-namr
+# ::smatch 0.71
+(h / head-01 
+         :ARG0 (h2 / he) 
+         :ARG1 (s / section 
+                 :mod (n / news)))
+
+# ::id amu-lc-ambig_2c
+# ::snt  We'll head them off
+(h / head-off-03
+    :ARG0 (w / we)
+    :ARG1 (t / they))
+
+# ::id amu-lc-ambig_2c-jamr
+# ::smatch 0
+(h / head-01)
+
+# ::id amu-lc-ambig_2c-camr
+# ::smatch 0.4
+(x3 / head-01
+	:ARG0 (x1 / we))
+
+# ::id amu-lc-ambig_2c-namr
+# ::smatch 0.67
+(h / head-01 
+         :ARG0 (w / we) 
+         :ARG1 (t / they))
+
+# ::id amu-lc-ambig_3a
+# ::snt He bought some butter from the store
+(b / buy-01
+    :ARG0 (h / he)
+    :ARG1 (b2 / butter
+        :mod (s / some))
+    :location (s2 / store))
+
+# ::id amu-lc-ambig_3a-jamr
+# ::smatch 0.78
+(b2 / buy-01 
+         :ARG0 (h / he) 
+         :ARG1 (b / butter 
+               :quant (s / some)))
+
+# ::id amu-lc-ambig_3a-camr
+# ::smatch 0.7
+(x2 / buy-01
+         :ARG0 (x1 / he)
+         :ARG1 (x4 / butter-00
+                  :quant (x3 / some))
+         :ARG2 (x7 / store))
+
+# ::id amu-lc-ambig_3a-namr
+# ::smatch 0.8
+(b / buy-01 
+         :ARG0 (h / he) 
+         :ARG1 (b2 / butter 
+         :quant (s / some) 
+         :source (s2 / store)))
+
+# ::id amu-lc-ambig_3b
+# ::snt He is going to butter the bread
+(b / butter-01
+    :ARG0 (h / he)
+    :ARG1 (b2 / bread))
+
+# ::id amu-lc-ambig_3b-jamr
+# ::smatch 0.4
+(b / butter-00 
+         :ARG0 (h / he))
+
+# ::id amu-lc-ambig_3b-camr
+# ::smatch 0.53
+(x3 / go-02
+         :ARG0 (x1 / he)
+         :ARG1 (x5 / butter-00
+                  :ARG0 x1
+                  :ARG1 (x7 / bread)))
+
+# ::id amu-lc-ambig_3b-namr
+# ::smatch 0.67
+(b / butter 
+         :ARG0 (h / he) 
+         :ARG1 (b2 / bread))
+
+# ::id amu-lc-ambig_4a
+# ::snt She has a red shovel
+(h / have-03
+    :ARG0 (s / she)
+    :ARG1 (s2 / shovel
+        :mod (r / red)))
+
+# ::id amu-lc-ambig_4a-jamr
+# ::smatch 0.33
+(r / red 
+         :part (s / she))
+
+# ::id amu-lc-ambig_4a-camr
+# ::smatch 0.88
+(x2 / have-03
+         :ARG0 (x1 / she)
+         :ARG1 (x5 / shovel-01
+                  :mod (x4 / red)))
+
+# ::id amu-lc-ambig_4a-namr
+# ::smatch 0.88
+ (h / have-03 
+         :ARG0 (s / she) 
+         :ARG1 (s2 / shoveled 
+                  :mod (r / red)))
+
+# ::id amu-lc-ambig_4b
+# ::snt She is going to shovel the snow
+(s / shovel-01
+    :ARG0 (s2 / she)
+    :ARG1 (s3 / snow))
+
+# ::id amu-lc-ambig_4b-jamr
+# ::smatch 0.8
+(s / shovel-01 
+      :ARG0 (s2 / she))
+
+# ::id amu-lc-ambig_4b-camr
+# ::smatch 1.0
+(x5 / shovel-01
+         :ARG0 (x1 / she)
+         :ARG1 (x7 / snow))
+
+# ::id amu-lc-ambig_4b-namr
+# ::smatch 0.67
+(s / shoveled 
+          :ARG0 (s2 / she) 
+          :ARG1 (s3 / snow))
+
+# ::id amu-lc-ambig_5a
+# ::snt Sarah climbed down the ladder
+(c / climb-01
+    :ARG0 (p / person
+        :name (n / name
+            :op1 "Sarah"))
+        :ARG1 (l / ladder)
+        :direction (d / down))
+
+# ::id amu-lc-ambig_5a-jamr
+# ::smatch 0.76
+(c / climb-01 
+         :ARG0 (p / person 
+                  :name (n / name 
+                  :op1 "Sarah") 
+                  :wiki "Sarah_Palin") 
+         :ARG2 (d / down))
+
+# ::id amu-lc-ambig_5a-camr
+# ::smatch 0.9
+(x2 / climb-01
+         :ARG0 (x1 / person
+                  :name (n / name
+                           :op1 "Sarah"))
+         :ARG1 (x5 / ladder))
+
+# ::id amu-lc-ambig_5a-namr
+# ::smatch 0.73
+(c / climbed 
+         :ARG0 (p / person 
+                  :name (n / name 
+                  :op1 "Sarah")) 
+                  :direction (d / down 
+                  :op1 (l / ladder)))
+
+# ::id amu-lc-ambig_5b
+# ::snt Sarah bought a down blanket
+(b / buy-01
+    :ARG0 (p / person
+        :name (n / name
+            :op1 "Sarah"))
+    :ARG1 (b2 / blanket
+        :mod (d / down)))
+
+# ::id amu-lc-ambig_5b-jamr
+# ::smatch 0.76
+(b / buy-01 
+         :ARG0 (p / person 
+                  :name (n / name 
+                           :op1 "Sarah") 
+                  :wiki "Sarah_Palin") 
+         :ARG1 (d / down))
+
+# ::id amu-lc-ambig_5b-camr
+# ::smatch 1.0
+(x2 / buy-01
+         :ARG0 (x1 / person
+                  :name (n / name
+                           :op1 "Sarah"))
+         :ARG1 (x5 / blanket
+                  :mod (x4 / down)))
+
+# ::id amu-lc-ambig_5b-namr
+# ::smatch 0.82
+(b / buy-01 
+       :ARG0 (p / person 
+              :name (n / name 
+              :op1 "Sarah")) 
+       :ARG1 (b2 / blankets 
+              :direction (d / down)))
+
+# ::id amu-lc-ambig_6a
+# ::snt My dog always barks at mailmen
+(b / bark-01
+    :time (a / always)
+    :ARG0 (d / dog
+        :poss (i / i))
+    :prep-at (m / mailman))
+
+# ::id amu-lc-ambig_6a-jamr
+# ::smatch 0.89
+(b / bark-01 
+       :ARG0 (d / dog 
+              :poss (i / i)) 
+              :time (a / always))
+
+# ::id amu-lc-ambig_6a-camr
+# ::smatch 0.78
+(x5 / bark-01
+       :ARG0 (x2 / dog)
+       :time (x4 / always)
+       :location (x7 / mailman))
+
+# ::id amu-lc-ambig_6a-namr
+# ::smatch 0.42
+(p / photograph-01 
+       :ARG0 (d / dog 
+       :ARG0-of (h / have-rel-role-91 
+              :ARG1 (i / i) 
+              :ARG2 (d2 / dd1))) 
+              :location (m / mailmen) 
+              :time (a / always))
+
+# ::id amu-lc-ambig_6b
+# ::snt The tree's bark was brown 
+(b / brown
+    :ARG1 (b1 / bark
+           :part-of (t / tree)))
+
+# ::id amu-lc-ambig_6b-jamr
+# ::smatch 0.33
+(t / tree’ 
+       :ARG1-of (b2 / bark-01 
+              :domain-of (b / brown)))   
+ 
+# ::id amu-lc-ambig_6b-camr
+# ::smatch 0.5
+(x6 / brown
+       :domain (x4 / bark-01
+       :ARG0 (x2 / tree)))
+
+# ::id amu-lc-ambig_6b-namr
+# ::smatch 0.4
+(b / brown 
+       :domain (t / trees))
+
+# ::id amu-lc-ambig_7a
+# ::snt Flying planes are dangerous 
+(e / endanger-01    
+     :domain (p / plane
+     :ARG1-of (f / fly-01)))
+
+# ::id amu-lc-ambig_7a-jamr
+# ::smatch 0.4
+(p / plane 
+       :mod (f / fly-01))
+
+# ::id amu-lc-ambig_7a-camr
+# ::smatch 0.33
+(x4 / dangerous
+       :domain (x1 / flying
+       :ARG1 (x2 / plane)))
+
+# ::id amu-lc-ambig_7a-namr
+# ::smatch 0.67
+(e / endanger-01 
+       :ARG1 (p / plane 
+              :destination (f / fly-01)))
+
+# ::id amu-lc-ambig_7b
+# ::snt Flying planes is dangerous 
+(e / endanger-01
+   :ARG1 (f / fly-01
+              :ARG1 (p / plane)))
+
+# ::id amu-lc-ambig_7b-jamr
+# ::smatch 0.4
+(p / plane 
+       :mod (f / fly-01))
+
+# ::id amu-lc-ambig_7b-camr
+# ::smatch 0.14
+(xap0 / cause-01
+       :ARG0 (x4 / dangerous
+              :domain (x2 / plane
+                     :mod (x1 / flying))))
+
+# ::id amu-lc-ambig_7b-namr
+# ::smatch 0.67
+(e / endanger-01 
+       :ARG1 (p / plane 
+              :destination (f / fly-01)))
+
+# ::id amu-lc-ambig_8a
+# ::snt They can fish
+(p / possible-01 
+        :ARG1 (f / fish-01 
+                :ARG0 (t / they)))
+
+# ::id amu-lc-ambig_8a-jamr
+# ::smatch 0.67
+(p / possible-01 
+       :domain (f / fish-01 
+       :ARG2 (t / they))
+
+# ::id amu-lc-ambig_8a-camr
+# ::smatch 0.17
+(x2 / possible
+       :domain (x3 / fish
+              :domain (x1 / they)))
+
+# ::id amu-lc-ambig_8a-namr
+# ::smatch 0.6
+(p / possible-01 
+       :ARG1 (f / fish))
+
+# ::id amu-lc-ambig_8b
+# ::snt They can fish
+(c / can-01 
+      :ARG0 (t / they)
+      :ARG1 (f / fish))
+
+# ::id amu-lc-ambig_8b-jamr
+# ::smatch 0.17
+(p / possible-01 
+       :domain (f / fish-01 
+       :ARG2 (t / they))
+
+# ::id amu-lc-ambig_8b-camr
+# ::smatch  0.33
+(x2 / possible
+       :domain (x3 / fish
+              :domain (x1 / they)))
+
+# ::id amu-lc-ambig_8b-namr
+# ::smatch 0.4
+(p / possible-01 
+       :ARG1 (f / fish))
+
+#### Sentences with lexical non-categorial ambiguities:
+
+# ::id amu-lnc-ambig_9a
+# ::snt He caught a fish at the bank 
+(c / catch-01
+    :ARG0 (h / he)
+    :ARG1 (f / fish)
+    :location (b / bank))
+
+# ::id amu-lnc-ambig_9a-jamr
+# ::smatch 0.71
+(x2 / catch-02
+       :ARG0 (x1 / he)
+       :ARG1 (x4 / fish)
+       :ARG2 (x7 / bank))
+
+# ::id amu-lnc-ambig_9a-camr
+# ::smatch 0.88
+(c / catch-01 
+       :ARG0 (h / he) 
+       :ARG1 (f / fish) 
+       :location (b / bank))
+
+# ::id amu-lnc-ambig_9a-namr
+# ::smatch 1.0
+(f / fish 
+       :ARG1-of (c / catch-02 
+            :ARG0 (h / he)))
+
+# ::id amu-lnc-ambig_9b
+# ::snt He went to the bank to put money
+(g / go-02
+      :ARG0 (h / he)
+      :ARG4 (s / bank)
+      :purpose (b / put-01
+               :ARG0 h
+               :ARG1 (m / money)))
+
+# ::id amu-lnc-ambig_9b-jamr
+# ::smatch 0.59
+(g / go-02 
+       :ARG0 (h / he) 
+       :ARG4 (b / bank) 
+       :purpose (p / put-01 
+              :ARG0 h))
+
+# ::id amu-lnc-ambig_9b-camr
+# ::smatch 0.95
+(x2 / go-02
+       :ARG0 (x1 / he)
+       :ARG4 (x5 / bank)
+              :purpose (x7 / put-01
+                     :ARG1 (x8 / money)))
+
+# ::id amu-lnc-ambig_9b-namr
+# ::smatch 0.8
+(g / go-02 
+       :ARG0 (h / he) 
+       :ARG4 (b / bank) 
+              :purpose (p / put-01 
+              :ARG0 (h2 / he) 
+              :ARG1 (m / money) 
+              :ARG2 (b2 / bank)))
+
+# ::id amu-lnc-ambig_10a
+# ::snt John gave him a tap on the shoulder
+(c / catch-01
+            :ARG0 (h / he)
+            :ARG1 (f / fish)
+            :location (b / bank))
+# ::id amu-lnc-ambig_10a-jamr
+# ::smatch 0.61
+(g / give-01 
+      :ARG0 (p / person 
+            :ARG0-of (t / tap-03) 
+            :name (n / name 
+                  :op1 "John") 
+            :wiki -))
+
+# ::id amu-lnc-ambig_10a-camr
+# ::smatch 0.55
+(x2 / give-01
+       :ARG0 (x1 / person
+              :name (n / name
+                     :op1 "John"))
+       :null_edge (x5 / tap
+              :ARG1 (x8 / shoulder)))
+
+# ::id amu-lnc-ambig_10a-namr
+# ::smatch 0.92
+(g / give-01 
+       :ARG0 (p / person 
+              :name (n / name 
+              :op1 "John")) 
+       :ARG1 (t / tap :ARG1 (s / shoulder)) 
+       :ARG2 (h / he))
+
+# ::id amu-lnc-ambig_10b
+# ::snt The water tap is broken
+(b / break-01
+      :ARG0 (t / tap
+        :mod (w / water)))
+
+# ::id amu-lnc-ambig_10b-jamr
+# ::smatch 0.2
+(t / tap-03 
+       :ARG0 (w / water))
+
+# ::id amu-lnc-ambig_10b-camr
+# ::smatch 0.67
+(x5 / break-01
+       :ARG1 (x2 / water
+              :mod (x3 / tap)))
+
+# ::id amu-lnc-ambig_10b-namr
+# ::smatch 0.6
+(b / break-01 
+   :ARG1 (w / water))
+
+# ::id amu-lnc-ambig_11a
+# ::snt The city was near the mouth of the river
+(c / city
+    :location (n / near
+        :op1(m / mouth
+            :part-of (r / river))))
+
+# ::id amu-lnc-ambig_11a-jamr
+# ::smatch 0.33
+(n / near-02 
+      :ARG1 (c / city) 
+      :ARG2 (m / mouth))
+
+# ::id amu-lnc-ambig_11a-camr
+# ::smatch 0.57
+(x2 / city
+       :location (x4 / near
+              :op1 (x6 / mouth
+       :ARG1 (x9 / river))))
+
+# ::id amu-lnc-ambig_11a-namr
+# ::smatch 0.57
+(n / near-02 
+       :ARG1 (c / city) 
+       :ARG2 (m / mouth 
+              :part-of (r / river)))
+
+# ::id amu-lnc-ambig_11b
+# ::snt Don't speak with your mouth full
+(s / speak-01
+    :mode imperative
+    :polarity -
+    :ARG0 (y / you) 
+              :manner (m / mouth
+                            :mod (f / full)))
+
+# ::id amu-lnc-ambig_11b-jamr
+# ::smatch 0.43
+(s / speak-01 
+      :ARG3 (m / mouth))
+
+# ::id amu-lnc-ambig_11b-camr
+# ::smatch 0.62
+(x3 / speak-01
+       :ARG1 (x6 / mouth
+              :mod (x7 / full)))
+# ::id amu-lnc-ambig_11b-namr
+# ::smatch 0.76
+(s / speak-01 
+       :polarity – 
+       :ARG0 (y / you) 
+       :ARG2 (m / mouth 
+              :part-of (y2 / you) 
+              :mod (f / full)))
+
+# ::id amu-lnc-ambig_12a
+# ::snt I have a goal in life
+(h / have-03
+  :ARG0 (i / i)
+  :ARG1 (g / goal
+    :prep-in (l / life )))
+
+# ::id amu-lnc-ambig_12a-jamr
+# ::smatch 0.17
+(g / goal 
+       :ARG0 (i / i))
+
+# ::id amu-lnc-ambig_12a-camr
+# ::smatch 0.88
+(x3 / have-03
+       :ARG0 (x2 / i)
+       :ARG1 (x5 / goal
+              :ARG1 (x7 / life)))
+
+# ::id amu-lnc-ambig_12a-namr
+# ::smatch 1.0
+(h / have-03 
+       :ARG0 (i / i) 
+       :ARG1 (g / goal
+             :prep-in (l / life)))
+
+# ::id amu-lnc-ambig_12b
+# ::snt Liverpool won by one goal to nil
+(w / win-01 
+      :ARG0 (o / organization 
+               :wiki "Liverpool"
+               :name (n / name
+                   :op1 "Liverpool"))
+      :manner (s / score-entity
+               :op1 (g / goal 
+                              :quant one)
+               :op2 (n2 / none)))
+
+# ::id amu-lnc-ambig_12b-jamr
+# ::smatch 0.64
+(w / win-01 
+      :ARG0 (c / city 
+            :name (n / name 
+                  :op1 "Liverpool") 
+            :wiki "Liverpool") 
+      :degree (g / goal))
+
+# ::id amu-lnc-ambig_12b-camr
+# ::smatch 0.64
+(x2 / win-01
+       :ARG0 (x1 / organization
+              :name (n / name
+                     :op1 "Liverpool")))
+
+# ::id amu-lnc-ambig_12b-namr
+# ::smatch 0.5
+(w / win-01 
+       :ARG0 (c / city 
+       :name (n / name 
+              :op1 "Liverpool")) 
+       :ARG2 (g / goal :quant 1) 
+       :ARG3 (g2 / goal :quant 1))
+
+
+#### Sentences with syntactical (structural) ambiguities:
+
+
+# ::id amu-syn-ambig_13a
+# ::snt The murderer killed the student with a book
+(k / kill-01 
+       :ARG0 (m / murderer)
+       :instrument (b / book)
+       :ARG1 (p / person
+           :ARG0-of (s / study-01)))
+
+# ::id amu-syn-ambig_13a-jamr
+# ::smatch 0.7
+(k / kill-01 
+       :ARG0 (m / murderer)
+       :instrument (b / book)
+       :ARG1 (p / person
+           :ARG0-of (s / study-01)))
+
+# ::id amu-syn-ambig_13a-camr
+# ::smatch 0
+--
+# ::id amu-syn-ambig_13a-namr
+# ::smatch 0
+--
+# ::id amu-syn-ambig_13b
+# ::snt The murderer killed the student with a book
+(k / kill-01
+    :ARG0 (m / murderer)
+    : ARG1 (p / person
+         :ARG0-of (s / study-01)
+         :accompanier (b / book)))
+
+# ::id amu-syn-ambig_13b-jamr
+# ::smatch 0
+--
+# ::id amu-syn-ambig_13b-camr
+# ::smatch 0.73
+(x3 / kill-01
+       :ARG0 (x2 / person
+              :ARG0-of (m / murder-01))
+              :ARG1 (x5 / person
+              :ARG0-of (s / study-01))
+                     :accompanier (x8 / book))
+
+# ::id amu-syn-ambig_13b-namr
+# ::smatch 0.73
+(k / kill-01 
+       :ARG0 (p / person 
+       :ARG0-of (m / murder-01)) 
+       :ARG1 (p2 / person 
+              :ARG0-of (s / study-01))
+              :accompanier (b / book))
+
+# ::id amu-syn-ambig_14a
+# ::snt You should bring wine or beer and dessert
+(r / recommend-01
+    :ARG1 (b / bring-01
+         :ARG0 (y / you)
+          :ARG1 (a / and
+                  :op1 (a2 / or
+                        :op1 (w / wine)
+                         :op2 (b2 / beer))
+                   :op2 (d / dessert))))
+
+# ::id amu-syn-ambig_14a-jamr
+# ::smatch 0.67
+(r / recommend-01 
+      :ARG1 (a / and 
+            :op1 (w / wine) 
+            :op2 (b / beer)) 
+      :ARG2 (b2 / bring-01 
+            :ARG0 (y / you) 
+            :ARG1 (o / or)))
+
+# ::id amu-syn-ambig_14a-camr
+# ::smatch 0.6
+(x3 / bring-01
+       :ARG0 (x1 / you)
+              :null_edge (x2 / recommend-01)
+       :ARG1 (x5 / or
+              :op2 (x6 / beer)
+              :op2 (x7 / and
+              :op1 (x4 / wine))
+              :op2 (x8 / dessert)))
+
+# ::id amu-syn-ambig_14a-namr
+# ::smatch 0.73
+(r / recommend-01 
+       :ARG1 (b / bring-01 
+       :ARG0 (y / you) 
+       :ARG1 (o / or 
+              :op1 (w / wine) 
+              :op2 (b2 / beer)) 
+       :ARG2 (y2 / you)))
+
+# ::id amu-syn-ambig_14b
+# ::snt You should bring wine or beer and dessert
+(r / recommend-01
+    :ARG1 (b / bring-01
+         :ARG0 (y / you)
+                :ARG1 (o / or
+                  :op1 (a2 / and
+                       :op1 (d / dessert)
+                       :op2 (b2 / beer))
+                   :op2 (w / wine))))
+
+# ::id amu-syn-ambig_14b-jamr
+# ::smatch 0.73
+(r / recommend-01 
+      :ARG1 (a / and 
+            :op1 (w / wine) 
+            :op2 (b / beer)) 
+      :ARG2 (b2 / bring-01 
+            :ARG0 (y / you) 
+            :ARG1 (o / or)))
+
+# ::id amu-lc-ambig_14b-camr
+# ::smatch 0.53
+(x3 / bring-01
+       :ARG0 (x1 / you)
+              :null_edge (x2 / recommend-01)
+       :ARG1 (x5 / or
+              :op2 (x6 / beer)
+              :op2 (x7 / and
+              :op1 (x4 / wine))
+              :op2 (x8 / dessert)))
+
+# ::id amu-syn-ambig_14b-namr
+# ::smatch 0.67
+(r / recommend-01 
+       :ARG1 (b / bring-01 
+       :ARG0 (y / you) 
+       :ARG1 (o / or 
+              :op1 (w / wine) 
+              :op2 (b2 / beer)) 
+       :ARG2 (y2 / you)))
+
+# ::id amu-syn-ambig_15a
+# ::snt Young boys and girls love the adventure playground
+(l / love-01
+    :ARG0 (a / and
+            :op1 (b / boy
+               :mod (y / young))
+            :op2 (g / girl))
+    :ARG1 (p / playground
+            :mod (a2 / adventure)))
+
+# ::id amu-syn-ambig_15a-jamr
+# ::smatch 0.75
+(l / love-01 
+      :ARG0 (a2 / and 
+            :op1 (b / boy) 
+            :op2 (g / girl)) 
+      :ARG1 (a / adventure))
+
+# ::id amu-syn-ambig_15a-camr
+# ::smatch 1.0
+(x5 / love-01
+       :ARG0 (x3 / and
+              :op1 (x2 / boy
+                     :mod (x1 / young))
+              :op2 (x4 / girl))	
+       :ARG1 (x8 / playground
+                     :mod (x7 / adventure)))
+
+# ::id amu-syn-ambig_15a-namr
+# ::smatch 0.93
+(l / love-01 
+        :ARG0 (a / and 
+                :op1 (b / boy 
+                     :mod (y / young)) 
+                :op2 (g / girl)) 
+        :ARG1 (p / playground 
+                    :mod (a2 / adventures)))
+
+# ::id amu-syn-ambig_15b
+# ::snt Young boys and girls love the adventure playground
+(l / love-01
+    :ARG0 (a / and
+            :op1 (b / boy
+               :mod (y / young))
+            :op2 (g / girl
+               :mod y))
+    :ARG1 (p / playground
+            :mod (a2 / adventure)))
+
+# ::id amu-syn-ambig_15b-jamr
+# ::smatch 0.72
+(l / love-01 
+      :ARG0 (a2 / and 
+            :op1 (b / boy) 
+            :op2 (g / girl)) 
+      :ARG1 (a / adventure))
+
+# ::id amu-syn-ambig_15b-camr
+# ::smatch 0.97
+(x5 / love-01
+       :ARG0 (x3 / and
+              :op1 (x2 / boy
+                     :mod (x1 / young))
+              :op2 (x4 / girl))	
+       :ARG1 (x8 / playground
+                     :mod (x7 / adventure)))
+
+# ::id amu-syn-ambig_15b-namr
+# ::smatch 0.9
+(l / love-01 
+        :ARG0 (a / and 
+                :op1 (b / boy 
+                     :mod (y / young)) 
+                :op2 (g / girl)) 
+        :ARG1 (p / playground 
+                    :mod (a2 / adventures)))
+
