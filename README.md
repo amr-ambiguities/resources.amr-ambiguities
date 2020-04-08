@@ -1,4 +1,4 @@
-# resoources.amr-ambiguities
+# resources.amr-ambiguities
 This repository contains the resources of a paper "  Dealing with Natural Language Ambiguities using Abstract Meaning Representation (AMR)"
 
 
